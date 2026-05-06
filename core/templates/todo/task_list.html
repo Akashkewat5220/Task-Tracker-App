@@ -1,0 +1,19 @@
+<h2>
+    My Todo List
+</h2>
+
+<ul>
+    {% for tasks in tasks %}
+    <li>
+        {{task.title}}
+        {% if task.complete %}
+            ✅
+        {% end if %}
+    </li>
+
+{% empty %}
+<li>
+    No tasks yet
+</li>
+{% end for %}
+</ul>
